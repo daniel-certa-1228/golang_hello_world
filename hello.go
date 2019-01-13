@@ -64,4 +64,12 @@ func main() {
 	var j float64 = 25.99
 	fmt.Println(float64(i) + j)
 
+	const con1 = 12
+	const con2 = "Con 2"
+
+	var name1 = "Charlie"
+	type myString string
+	var customeName myString = "Charlie"
+
+	fmt.Println(name1, customeName)
 }
