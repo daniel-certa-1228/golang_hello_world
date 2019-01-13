@@ -4,11 +4,13 @@ import (
 	"fmt"
 	"math"
 	"reflect"
+	"unsafe"
 )
 
 func main() {
+	//Hello, world.
 	fmt.Printf("hello, world\n")
-
+	//Variables
 	var age int
 	fmt.Println("My age is", age)
 	age = 44
@@ -39,4 +41,27 @@ func main() {
 	a, b := 145.8, 543.8
 	c := math.Min(a, b)
 	fmt.Println("minimum value is ", c)
+	//Types
+	bool_1 := true
+	bool_2 := false
+	fmt.Println("bool_1:", bool_1, "bool_2:", bool_2)
+	bool_3 := bool_1 && bool_2
+	fmt.Println("bool_3:", bool_3)
+	bool_4 := bool_1 || bool_2
+	fmt.Println("bool_4:", bool_4)
+
+	var int_1 int = 100
+	int_2 := 200
+	fmt.Println("int_1:", int_1, "int_2", int_2)
+	fmt.Printf("type of int_1 is %T, size of int_1 is %d\n", int_1, unsafe.Sizeof(int_1))
+	fmt.Printf("type of int_2 is %T, size of int_2 is %d\n", int_2, unsafe.Sizeof(int_2))
+
+	var first string = "Dan"
+	last := "Certa"
+	fmt.Println(first + " " + last)
+
+	var i int = 100
+	var j float64 = 25.99
+	fmt.Println(float64(i) + j)
+
 }
